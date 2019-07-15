@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="法国尼斯遭遇恐怖袭击 卡车撞人造成至少80人死亡" />
+
+            <ImageView
+                android:id="@+id/im_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tag"
+                tools:srcCompat="@mipmap/demo1" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:letterSpacing="0.1"
+                android:lineSpacingMultiplier="1.3"
+                android:text="在609年前的今天，1410年7月15日 (农历六月十四)，格林瓦尔德会战爆发。\n1410年7月15日，著名的格林瓦尔德会战爆发。波兰-立陶宛联军3.9万人在波兰国王弗拉迪斯拉夫·雅盖洛指挥下，在坦伦堡和格林瓦尔德附近与条顿骑士团约2.7万人的军队展开决战。条顿骑士团在此战中精锐尽失，8千名骑士被杀，2千人被俘，骑士团大团长冯·容金根等多数首领阵亡。条顿骑士团从此一蹶不振，波兰由此逐渐收复失地，并获得格但斯克等城镇和波罗的海出海口。(波兰作者显克微支根据此战撰写了小说《十字军骑士》)\n"
+                android:textColor="@color/blackGrey"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/im_img" />
+
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="历史上的今天"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:drawableStart="@mipmap/date"
+                android:drawablePadding="4dp"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tag"
+                app:layout_constraintStart_toEndOf="@+id/tv_tag"
+                app:layout_constraintTop_toTopOf="@+id/tv_tag"
+                tools:text="2019-07-15" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>
