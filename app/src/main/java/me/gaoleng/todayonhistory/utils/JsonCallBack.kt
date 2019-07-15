@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory
+package me.gaoleng.todayonhistory.utils
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -8,6 +8,8 @@ import com.google.gson.reflect.TypeToken
 import com.lzy.okgo.callback.AbsCallback
 import com.lzy.okgo.model.Response
 import com.lzy.okgo.request.base.Request
+import me.gaoleng.todayonhistory.beans.ResponseBean
+import me.gaoleng.todayonhistory.beans.TodayBean
 
 abstract class JsonCallBack<T>(val context: Context) : AbsCallback<ResponseBean<T>>() {
     var dialog: ProgressDialog? = null

@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory
+package me.gaoleng.todayonhistory.views
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -10,6 +10,13 @@ import com.lzy.okgo.OkGo
 import com.lzy.okgo.cache.CacheMode
 import com.lzy.okgo.callback.AbsCallback
 import kotlinx.android.synthetic.main.activity_main.*
+import me.gaoleng.todayonhistory.*
+import me.gaoleng.todayonhistory.adapters.TodayAdapter
+import me.gaoleng.todayonhistory.beans.ResponseBean
+import me.gaoleng.todayonhistory.beans.TodayBean
+import me.gaoleng.todayonhistory.utils.Const
+import me.gaoleng.todayonhistory.utils.JsonCallBack
+import me.gaoleng.todayonhistory.utils.Utils
 
 class MainActivity : AppCompatActivity() {
 
@@ -74,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         OkGo.get<ResponseBean<T>>(url)
                 .cacheKey(url)
                 .cacheMode(CacheMode.IF_NONE_CACHE_REQUEST)
-                .params("key", "d268a055d3bacb71dca3df7a86da0842")
+                .params("key", Const.getKey())
                 .params(params)
                 .execute(callBack)
     }

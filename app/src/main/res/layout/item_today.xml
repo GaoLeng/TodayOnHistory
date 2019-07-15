@@ -26,7 +26,7 @@
         android:layout_height="0dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tv_year"
         app:layout_constraintStart_toStartOf="@+id/tv_year"
         app:layout_constraintTop_toBottomOf="@+id/tv_year">
@@ -42,7 +42,7 @@
         <View
             android:id="@+id/v_line"
             android:layout_width="2dp"
-            android:layout_height="0dp"
+            android:layout_height="20dp"
             android:layout_weight="1"
             android:background="@color/red"
             app:layout_constraintEnd_toEndOf="@+id/v_point_start"
@@ -67,9 +67,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/item_background"
         android:orientation="horizontal"
-        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_year"
         app:layout_constraintTop_toTopOf="@+id/tv_year">
@@ -93,4 +94,5 @@
             tools:text="英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职英国新铁娘子就职 特雷莎·梅成第二任女首相" />
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

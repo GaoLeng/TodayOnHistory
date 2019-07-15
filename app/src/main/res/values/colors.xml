@@ -8,4 +8,5 @@
     <color name="black">#333333</color>
     <color name="blackGrey">#353535</color>
     <color name="grey">#878787</color>
+    <color name="translucent">#72878787</color>
 </resources>

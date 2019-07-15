@@ -1,12 +1,15 @@
-package me.gaoleng.todayonhistory
+package me.gaoleng.todayonhistory.views
 
-import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_today.*
+import me.gaoleng.todayonhistory.utils.Const
+import me.gaoleng.todayonhistory.R
+import me.gaoleng.todayonhistory.beans.TodayBean
+import me.gaoleng.todayonhistory.utils.Utils
 
 class TodayActivity : AppCompatActivity() {
 
@@ -26,9 +29,22 @@ class TodayActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
 
         tv_title.text = data.title
-        tv_date.text = """${data.year}-${data.month}-${data.day}"""
+        tv_date.text = Utils.formatDate(data.year, data.month, data.day)
         tv_content.text = convertContent(data.content)
         Glide.with(this).load(data.pic).into(im_img)
+        im_img.setOnClickListener {
+            val intent = Intent(this, DragImgActivity::class.java)
+            val location = IntArray(2)
+            im_img.getLocationOnScreen(location)
+            intent.putExtra("left", location[0])
+            intent.putExtra("top", location[1])
+            intent.putExtra("height", im_img.height)
+            intent.putExtra("width", im_img.width)
+            intent.putExtra(Const.EXTRA_IMG, data.pic)
+
+            startActivity(intent)
+            overridePendingTransition(0,0)
+        }
     }
 
     private fun convertContent(content: String): String {

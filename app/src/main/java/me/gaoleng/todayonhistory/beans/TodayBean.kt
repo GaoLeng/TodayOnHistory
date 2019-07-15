@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory
+package me.gaoleng.todayonhistory.beans
 
 import java.io.Serializable
 

@@ -13,15 +13,19 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="me.gaoleng.todayonhistory.MainActivity">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+        <activity android:name="me.gaoleng.todayonhistory.views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TodayActivity" />
+        <activity android:name=".views.TodayActivity" />
+        <activity
+            android:name=".views.DragImgActivity"
+            android:theme="@style/translucent" />
     </application>
 
 </manifest>

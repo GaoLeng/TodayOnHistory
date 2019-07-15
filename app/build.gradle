@@ -28,6 +28,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.bm.photoview:library:1.4.1'
+    implementation 'com.github.githubwing:DragPhotoView:1.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:+'
