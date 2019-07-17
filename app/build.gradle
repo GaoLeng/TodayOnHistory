@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "me.gaoleng.todayonhistory"
+        applicationId "top.gaoleng.todayonhistory"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 101

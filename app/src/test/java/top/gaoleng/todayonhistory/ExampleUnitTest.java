@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory;
+package top.gaoleng.todayonhistory;
 
 import org.junit.Test;
 

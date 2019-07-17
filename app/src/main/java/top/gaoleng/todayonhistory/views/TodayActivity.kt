@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.views
+package top.gaoleng.todayonhistory.views
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_today.*
-import me.gaoleng.todayonhistory.utils.Const
-import me.gaoleng.todayonhistory.R
-import me.gaoleng.todayonhistory.beans.TodayBean
-import me.gaoleng.todayonhistory.utils.Utils
+import top.gaoleng.todayonhistory.utils.Const
+import top.gaoleng.todayonhistory.R
+import top.gaoleng.todayonhistory.beans.TodayBean
+import top.gaoleng.todayonhistory.utils.Utils
 
 class TodayActivity : AppCompatActivity() {
 

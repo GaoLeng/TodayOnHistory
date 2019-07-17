@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.beans
+package top.gaoleng.todayonhistory.beans
 
 data class ResponseBean<T>(
         //  "result":

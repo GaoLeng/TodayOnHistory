@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.adapters
+package top.gaoleng.todayonhistory.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_today.view.*
-import me.gaoleng.todayonhistory.R
-import me.gaoleng.todayonhistory.beans.TodayBean
-import me.gaoleng.todayonhistory.utils.Utils
+import top.gaoleng.todayonhistory.R
+import top.gaoleng.todayonhistory.beans.TodayBean
+import top.gaoleng.todayonhistory.utils.Utils
 
 class TodayAdapter(var context: Context, var datas: List<TodayBean>?) : RecyclerView.Adapter<TodayAdapter.Holder>() {
 

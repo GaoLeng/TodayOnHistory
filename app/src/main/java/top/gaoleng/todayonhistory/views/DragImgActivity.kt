@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.views
+package top.gaoleng.todayonhistory.views
 
 import android.animation.Animator
 import android.animation.ValueAnimator
@@ -12,8 +12,8 @@ import android.view.ViewTreeObserver
 import com.bumptech.glide.Glide
 import com.wingsofts.dragphotoview.DragPhotoView
 import kotlinx.android.synthetic.main.activity_drag_photo.*
-import me.gaoleng.todayonhistory.utils.Const
-import me.gaoleng.todayonhistory.R
+import top.gaoleng.todayonhistory.utils.Const
+import top.gaoleng.todayonhistory.R
 
 import java.util.ArrayList
 

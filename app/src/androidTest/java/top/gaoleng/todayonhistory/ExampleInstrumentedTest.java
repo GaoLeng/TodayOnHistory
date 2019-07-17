@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory;
+package top.gaoleng.todayonhistory;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.utils
+package top.gaoleng.todayonhistory.utils
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -8,8 +8,8 @@ import com.google.gson.reflect.TypeToken
 import com.lzy.okgo.callback.AbsCallback
 import com.lzy.okgo.model.Response
 import com.lzy.okgo.request.base.Request
-import me.gaoleng.todayonhistory.beans.ResponseBean
-import me.gaoleng.todayonhistory.beans.TodayBean
+import top.gaoleng.todayonhistory.beans.ResponseBean
+import top.gaoleng.todayonhistory.beans.TodayBean
 
 abstract class JsonCallBack<T>(val context: Context) : AbsCallback<ResponseBean<T>>() {
     var dialog: ProgressDialog? = null
@@ -17,7 +17,7 @@ abstract class JsonCallBack<T>(val context: Context) : AbsCallback<ResponseBean<
     @Throws(Throwable::class)
     override fun convertResponse(response: okhttp3.Response): ResponseBean<T>? {
         val res = response.body()!!.string()
-        Log.e("TAG", "result: " + res)
+        Log.e("TAG", "result: $res")
         return Gson().fromJson<ResponseBean<T>>(res, object : TypeToken<ResponseBean<List<TodayBean>>>() {}.type)
     }
 
@@ -32,8 +32,7 @@ abstract class JsonCallBack<T>(val context: Context) : AbsCallback<ResponseBean<
     }
 
     override fun onSuccess(response: Response<ResponseBean<T>>?) {
-        dismiss()
-        if (response == null || response.body() == null) {
+        if (response?.body() == null) {
             onError("服务器返回为空")
             return
         }

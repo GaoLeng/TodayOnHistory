@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.utils
+package top.gaoleng.todayonhistory.utils
 
 object Const {
     val EXTRA_IMG = "EXTRA_IMG"

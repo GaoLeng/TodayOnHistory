@@ -1,4 +1,4 @@
-package me.gaoleng.todayonhistory.views
+package top.gaoleng.todayonhistory.views
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -10,13 +10,13 @@ import com.lzy.okgo.OkGo
 import com.lzy.okgo.cache.CacheMode
 import com.lzy.okgo.callback.AbsCallback
 import kotlinx.android.synthetic.main.activity_main.*
-import me.gaoleng.todayonhistory.*
-import me.gaoleng.todayonhistory.adapters.TodayAdapter
-import me.gaoleng.todayonhistory.beans.ResponseBean
-import me.gaoleng.todayonhistory.beans.TodayBean
-import me.gaoleng.todayonhistory.utils.Const
-import me.gaoleng.todayonhistory.utils.JsonCallBack
-import me.gaoleng.todayonhistory.utils.Utils
+import top.gaoleng.todayonhistory.*
+import top.gaoleng.todayonhistory.adapters.TodayAdapter
+import top.gaoleng.todayonhistory.beans.ResponseBean
+import top.gaoleng.todayonhistory.beans.TodayBean
+import top.gaoleng.todayonhistory.utils.Const
+import top.gaoleng.todayonhistory.utils.JsonCallBack
+import top.gaoleng.todayonhistory.utils.Utils
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val today = Utils.getTodayForDisplay(this);
-        tv_today.setText("""历史上${today}都发生了什么""")
+        val today = Utils.getTodayForDisplay(this)
+        tv_today.text = "历史上${today}都发生了什么"
 
         getTodayHistory()
     }
